@@ -3,10 +3,10 @@ import {readFile, writeFile, mkdir} from 'node:fs/promises';
 import path from 'node:path';
 import {propertySchema, type Property} from '../src/schema';
 import {fromRoot, syncModels} from './project';
-import {fetchAdministrativeBoundary, validateOsmSource} from './boundary';
+import {resolveAdminBoundary, validateOsmSource} from './boundary';
 import {geocodeLocation, fetchDrivingRoute} from './route';
 import {scanAmenitiesOSM, toPropertyAmenity} from './amenities';
-import {getLocalOsmMeta, scanLocalAmenities, fetchLocalBoundary} from './osm-local';
+import {getLocalOsmMeta, scanLocalAmenities} from './osm-local';
 
 /**
  * Tự động chọn mô hình 3D tối ưu từ kho 16 models dựa vào ngữ nghĩa BĐS
@@ -90,7 +90,7 @@ Cách dùng:
   npm run auto -- --input examples/tay-ho.json [tùy chọn]
 
 Tùy chọn:
-  --boundary <tên phường/xã>  Lấy tự động ranh giới hành chính từ OpenStreetMap
+  --boundary <tên phường/xã>  Lấy ranh hành chính từ OpenStreetMap vào adminBoundary
   --to <điểm đến>             Tính tuyến đường và cự ly (ví dụ: "Sân bay Nội Bài")
   --scan                      Tự động quét tiện ích lân cận (bán kính 2km)
   --source <auto|local|online> Nguồn dữ liệu OSM (mặc định: auto)
@@ -133,13 +133,8 @@ Tùy chọn:
   const boundaryQuery = values.boundary;
   if (boundaryQuery) {
     console.log(`🗺️ Đang tự động truy vấn ranh giới hành chính: "${boundaryQuery}"...`);
-    if (useLocal) {
-      if (!meta) throw new Error('Chưa có dữ liệu OSM local. Vui lòng chạy "npm.cmd run video -- osm-sync" trước.');
-      console.log(`📡 Sử dụng OSM local cho ranh giới...`);
-      property.boundaryPolygon = (await fetchLocalBoundary(boundaryQuery)).boundary;
-    } else {
-      property.boundaryPolygon = (await fetchAdministrativeBoundary(boundaryQuery)).boundary;
-    }
+    // Ranh hành chính vào adminBoundary; boundaryPolygon (ranh thửa đất) giữ nguyên.
+    property.adminBoundary = await resolveAdminBoundary(boundaryQuery, source);
     if (!property.dataSources) property.dataSources = [];
     if (!property.dataSources.includes('osm')) property.dataSources.push('osm');
   }
