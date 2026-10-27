@@ -43,7 +43,8 @@ Trên PowerShell của máy này dùng **`npm.cmd`** để tránh npm.ps1 làm m
 Sao chép `examples/ho-tay.json` thành file riêng và thay bằng dữ liệu đã kiểm chứng. Các số đo dùng số, không dùng chuỗi `"100m2"`.
 
 - `gps`: tọa độ vĩ độ / kinh độ của BĐS.
-- `boundaryPolygon`: (Tùy chọn) Mảng tọa độ các đỉnh ranh đất theo GIS / Sổ đỏ (ví dụ: `[{"lat": 21.0625, "lng": 105.8153}, ...]`). Hệ thống tự động chuyển đổi sang không gian 3D và vẽ khung viền phát sáng bám địa hình kèm các cọc mốc địa chính tại các góc.
+- `boundaryPolygon`: (Tùy chọn) Mảng tọa độ các đỉnh ranh đất theo GIS / Sổ đỏ (ví dụ: `[{"lat": 21.0625, "lng": 105.8153}, ...]`). Hệ thống tự động chuyển đổi sang không gian 3D và vẽ khung viền phát sáng bám địa hình kèm các cọc mốc địa chính tại các góc. Chỉ nhập ranh thửa đất thật; lệnh `fetch-boundary` không ghi vào trường này.
+- `adminBoundary`: (Tùy chọn) Ranh phường/xã/tỉnh `{name, adminLevel?, osmId?, polygon}` do `fetch-boundary` ghi từ OpenStreetMap (`polygon` 3–300 đỉnh, không lặp điểm đầu ở cuối). Đây không phải ranh thửa đất; hiện chưa được vẽ lên video.
 - `specs`: `areaM2`, `widthM`, `lengthM`, `stories`.
 - `amenities`: tối đa 6 tiện ích `{name, distanceM}`; có thể thêm `lat`/`lng` (cần đủ cả hai), `category` (`education`/`health`/`shopping`/`leisure`/`other`) và `image` (ảnh trong `public/`). Lệnh `scan-amenities` điền tự động từ OpenStreetMap kèm tọa độ; `distanceM` khi quét là đường chim bay. Nếu không tìm thấy hoặc mất mạng, lệnh báo lỗi và giữ nguyên file, không tự điền tiện ích mẫu.
 - `media.geo`: do `fetch-map` ghi, mô tả vùng bao phủ và phép chiếu của từng ảnh vệ tinh để chiếu tọa độ lên ảnh (`src/geo.ts`). Không cần nhập tay.
@@ -127,7 +128,9 @@ Khi BĐS có cả ảnh hiện trạng (`aerialImage` hoặc `propertyImage`) v�
 
 ## Tự động sinh kịch bản BĐS bằng AI (`script:ai`)
 
-Hệ thống tích hợp công cụ AI Copywriting trực tiếp dùng Gemini Flash API để biến các bài đăng thô của môi giới thành file `input.json` chuẩn cấu trúc kèm đầy đủ hook marketing BĐS:
+Hệ thống tích hợp công cụ AI Copywriting trực tiếp dùng Gemini Flash API để biến các bài đăng thô của môi giới thành file `input.json` chuẩn cấu trúc kèm đầy đủ hook marketing BĐS.
+
+AI chỉ trích xuất dữ kiện có trong bài, không suy đoán tọa độ hay kích thước. Lệnh còn kiểm tra lại: tọa độ `gps`, `specs.areaM2/widthM/lengthM` và khoảng cách tiện ích phải là số có trong bài, nếu không sẽ bị bỏ. Khi thiếu `gps`, `specs`, `contact.name` hoặc trường bắt buộc khác, lệnh **không** tạo file hợp lệ giả mà ghi bản nháp `<output>.draft.json` (mặc định `examples/<id>.draft.json`) với các trường thiếu để `null`, in danh sách trường cần nhập tay và thoát với mã 2. Điền dữ liệu thật, đổi tên bỏ `.draft`, rồi chạy `validate`. Lệnh không tự gán `media.model3d`; dùng `npm.cmd run auto` hoặc nhập tay.
 
 ```powershell
 # Cách 1: Truyền trực tiếp văn bản qua cờ --text
@@ -289,12 +292,17 @@ Các giá trị `style` được hỗ trợ:
 
 ## Tự động lấy Ranh giới Hành chính (`fetch-boundary`)
 
-Tự động truy vấn OpenStreetMap Nominatim để lấy tọa độ ranh giới hành chính của Phường / Xã / Quận / Huyện / Đô thị và ghi thẳng vào `boundaryPolygon`:
+Lấy đa giác ranh giới hành chính của Phường / Xã / Quận / Huyện / Tỉnh từ OpenStreetMap (dữ liệu local sau `osm-sync`, hoặc Nominatim online) và ghi vào trường `adminBoundary` (`name`, `adminLevel`, `osmId`, `polygon` tối đa 300 đỉnh):
 
 ```powershell
 # Lấy ranh giới phường và lưu vào file JSON
-npm.cmd run video -- fetch-boundary --input examples/ho-tay.json --query "Phường Quảng An, Tây Hồ, Hà Nội"
+npm.cmd run video -- fetch-boundary --input examples/ho-tay.json --query "Phường Quảng An, Tây Hồ, Hà Nội" [--source auto|local|online] [--osm-id 12345]
 ```
+
+- Lệnh **không** đụng `boundaryPolygon`: đó là ranh thửa đất (vẽ kèm cọc mốc ở góc), chỉ nhập từ sổ đỏ / trích lục / đo đạc. Ranh phường không phải ranh lô đất.
+- `npm.cmd run auto -- --boundary "..."` cũng ghi vào `adminBoundary`.
+- `adminBoundary` hiện mới được lưu và kiểm tra schema, chưa vẽ lên video.
+- Ranh OSM có thể chưa cập nhật theo sáp nhập đơn vị hành chính 1/7/2025, cần kiểm tra trước khi dùng.
 
 ---
 

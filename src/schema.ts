@@ -34,12 +34,28 @@ export const amenitySchema = z.object({
   image: assetPath.optional(),
 }).strict().refine((a) => (a.lat === undefined) === (a.lng === undefined), 'Tiện ích cần đủ cả lat và lng, hoặc bỏ cả hai');
 
+// Ranh phường/xã/tỉnh do fetch-boundary lấy từ OSM. Khác boundaryPolygon (ranh thửa đất).
+// Vòng đa giác hở: không lặp lại điểm đầu ở cuối.
+export const adminBoundarySchema = z.object({
+  name: text(180),
+  adminLevel: z.number().int().min(1).max(12).optional(),
+  osmId: z.number().int().positive().optional(),
+  polygon: z.array(coordinatePointSchema).min(3).max(300).refine((pts) => {
+    const first = pts[0];
+    const last = pts[pts.length - 1];
+    return !(first.lat === last.lat && first.lng === last.lng);
+  }, 'adminBoundary.polygon không được lặp lại điểm đầu ở cuối'),
+}).strict();
+export type AdminBoundary = z.infer<typeof adminBoundarySchema>;
+
 export const propertySchema = z.object({
   id: z.string().regex(/^[a-z0-9][a-z0-9-]{0,59}$/),
   title: text(100),
   address: text(180),
   gps: z.object({lat: z.number().min(-90).max(90), lng: z.number().min(-180).max(180)}),
+  // Ranh thửa đất (sổ đỏ/đo đạc), nhập tay. Không ghi ranh hành chính vào đây.
   boundaryPolygon: z.array(coordinatePointSchema).min(3).max(300).optional(),
+  adminBoundary: adminBoundarySchema.optional(),
   specs: z.object({
     areaM2: z.number().positive().max(1000000),
     widthM: z.number().positive().max(1000),

@@ -13,7 +13,7 @@ Công cụ chạy hoàn toàn **local trên máy**, điều khiển qua dòng l�
 ## 🚀 QUY TRÌNH 6 BƯỚC TỰ ĐỘNG HÓA TỪ A ĐẾN Z
 
 ### BƯỚC 1: TRÍCH XUẤT THÔNG TIN BĐS (ZERO-API PARSING)
-Khi người dùng đưa vào một đoạn tin đăng bán nhà/đất thô (từ Zalo, Facebook, tin nhắn môi giới), Agent tự động phân tích và tạo file JSON chuẩn theo mẫu sau (lưu tại `examples/<slug-bds>.json`):
+Khi người dùng đưa vào một đoạn tin đăng bán nhà/đất thô (từ Zalo, Facebook, tin nhắn môi giới), Agent tự động phân tích và tạo file JSON chuẩn theo mẫu sau (lưu tại `examples/<slug-bds>.json`). Chỉ điền dữ kiện có trong tin đăng: KHÔNG đoán `gps` theo tên khu vực, KHÔNG ước tính `widthM`/`lengthM`, KHÔNG đặt tên liên hệ giả. Trường nào thiếu thì hỏi người dùng (GPS lấy từ bản đồ/sổ đỏ). Nếu dùng `npm.cmd run script:ai`, lệnh sẽ ghi `examples/<id>.draft.json` và liệt kê trường còn thiếu khi bài đăng không đủ dữ kiện:
 
 ```json
 {
@@ -71,7 +71,7 @@ Sử dụng các lệnh CLI local đã tích hợp sẵn:
    npm.cmd run video -- fetch-map --input examples/<slug-bds>.json
    ```
 
-2. **Lấy ranh giới hành chính tự động (OpenStreetMap Local / Nominatim)**:
+2. **Lấy ranh giới hành chính tự động (OpenStreetMap Local / Nominatim)** — ghi vào `adminBoundary`, KHÔNG phải `boundaryPolygon` (ranh thửa đất, chỉ nhập từ sổ đỏ/đo đạc):
    ```powershell
    npm.cmd run video -- fetch-boundary --input examples/<slug-bds>.json --query "Phường Quảng An, Tây Hồ, Hà Nội" [--source auto|local|online] [--osm-id 12345]
    ```
@@ -174,5 +174,5 @@ Chọn 1 trong 8 phong cách hiệu ứng điện ảnh:
 ## ⚠️ NGUYÊN TẮC BẮT BUỘC (AGENTS.MD CONSTRAINTS)
 - Luôn sử dụng lệnh **`npm.cmd`** trên Windows PowerShell để tránh npm.ps1 làm mất cờ CLI.
 - Không sửa phiên bản Remotion khác `4.0.536`.
-- Không bịa đặt kích thước ranh giới sai lệch; luôn lấy số liệu thực từ người dùng hoặc hệ thống GIS.
+- Không bịa đặt kích thước ranh giới sai lệch; luôn lấy số liệu thực từ người dùng hoặc hệ thống GIS. Không ghi ranh phường/xã vào `boundaryPolygon`.
 - Tuyệt đối không lưu secret key hoặc video xuất ra vào git.
