@@ -211,7 +211,7 @@ function BentoAmenitiesScene({p, frame, portrait}: {p: Property; frame: number; 
       )}
 
       <div style={{color: theme.colors.textMuted, fontSize: 15, marginTop: 20}}>
-        Khoảng cách tính theo số liệu thực tế được cung cấp.
+        Khoảng cách đường chim bay, theo dữ liệu được cung cấp.
       </div>
     </div>
   );

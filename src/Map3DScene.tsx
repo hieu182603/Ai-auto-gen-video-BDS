@@ -101,13 +101,10 @@ function MultiZoomSatelliteGround({
   progress: number;
   span: number;
 }) {
-  const spaceSrc = p.media.spaceImage || 'media/ho-tay-space.jpg';
-  const citySrc = p.media.cityImage || 'media/ho-tay-city.jpg';
-  const plotSrc = p.media.aerialImage || 'media/ho-tay-plot.jpg';
-
-  const spaceTex = useSatelliteTexture(spaceSrc);
-  const cityTex = useSatelliteTexture(citySrc);
-  const plotTex = useSatelliteTexture(plotSrc);
+  // Không có ảnh thì để nền màu trơn: không lấy ảnh của BĐS khác làm ảnh vị trí.
+  const spaceTex = useSatelliteTexture(p.media.spaceImage);
+  const cityTex = useSatelliteTexture(p.media.cityImage);
+  const plotTex = useSatelliteTexture(p.media.aerialImage);
   // Tầng vũ trụ/thành phố giữ tỉ lệ theo span để camera zoom bậc thang vẫn đọc được; chỉ tầng thửa đất cần khớp ranh.
   const plotPlane = groundPlane(p.media.aerialImage ? p.media.geo?.aerialImage : undefined, p.gps, [span * 5.5, span * 4.2]);
 

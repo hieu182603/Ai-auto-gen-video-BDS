@@ -4,6 +4,16 @@ import type { Property } from './schema';
 import { theme, badgeStyle } from './theme';
 import { usesOsmData } from './osm';
 
+/** Dòng chú thích cuối poster: miễn trừ, nguồn OSM và bản quyền ảnh nền khi poster có dùng ảnh. */
+export function posterFootnote(p: Property): string {
+  const usesImage = Boolean(p.media.propertyImage || p.media.aerialImage);
+  return [
+    p.disclaimer,
+    usesOsmData(p) ? 'Dữ liệu bản đồ © OpenStreetMap contributors' : '',
+    usesImage ? p.media.attribution ?? '' : '',
+  ].filter(Boolean).join(' · ');
+}
+
 export function PropertyPoster({ property: p }: { property: Property }) {
   const { width, height } = useVideoConfig();
   const portrait = height > width;
@@ -195,9 +205,8 @@ export function PropertyPoster({ property: p }: { property: Property }) {
             <div style={{ fontSize: portrait ? 24 : 28, fontWeight: 600, color: theme.colors.textPrimary, marginTop: 4 }}>
               {p.contact.name}
             </div>
-            <div style={{ fontSize: 13, color: theme.colors.textMuted, marginTop: 2 }}>
-              {p.disclaimer}
-              {usesOsmData(p) ? ' · Dữ liệu bản đồ © OpenStreetMap contributors' : ''}
+            <div style={{ fontSize: 15, color: theme.colors.textMuted, marginTop: 2 }}>
+              {posterFootnote(p)}
             </div>
           </div>
 

@@ -9,7 +9,7 @@ const promiseMap = new Map<string, Promise<THREE.Texture | null>>();
 /**
  * Preload ảnh vệ tinh đồng bộ với Remotion delayRender theo từng đường dẫn src
  */
-export function preloadSatelliteTexture(src = 'media/ho-tay-satellite.jpg'): Promise<THREE.Texture | null> {
+export function preloadSatelliteTexture(src: string): Promise<THREE.Texture | null> {
   if (textureMap.has(src)) return Promise.resolve(textureMap.get(src)!);
   if (promiseMap.has(src)) return promiseMap.get(src)!;
 
@@ -81,7 +81,3 @@ export function useSatelliteTexture(src?: string): THREE.Texture | null {
   return state.src === src ? state.tex : null;
 }
 
-// Khởi chạy preload sẵn ảnh vệ tinh
-void preloadSatelliteTexture('media/ho-tay-plot.jpg');
-void preloadSatelliteTexture('media/ho-tay-city.jpg');
-void preloadSatelliteTexture('media/ho-tay-space.jpg');
