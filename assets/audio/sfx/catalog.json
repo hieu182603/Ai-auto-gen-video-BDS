@@ -1,0 +1,715 @@
+{
+  "categories": [
+    {
+      "name": "Clicks and Buttons",
+      "goc": "01_Clicks_and_Buttons",
+      "count": 9,
+      "sounds": [
+        {
+          "name": "Bookmark Tap",
+          "url": "/sfx/SFX132/01_Clicks_and_Buttons/Bookmark_Tap.wav"
+        },
+        {
+          "name": "Check Click",
+          "url": "/sfx/SFX132/01_Clicks_and_Buttons/Check_Click.wav"
+        },
+        {
+          "name": "Dial Clicks",
+          "url": "/sfx/SFX132/01_Clicks_and_Buttons/Dial_Clicks.wav"
+        },
+        {
+          "name": "Digital Click",
+          "url": "/sfx/SFX132/01_Clicks_and_Buttons/Digital_Click.wav"
+        },
+        {
+          "name": "Key Taps",
+          "url": "/sfx/SFX132/01_Clicks_and_Buttons/Key_Taps.wav"
+        },
+        {
+          "name": "Quick Button",
+          "url": "/sfx/SFX132/01_Clicks_and_Buttons/Quick_Button.wav"
+        },
+        {
+          "name": "Slider Ticks",
+          "url": "/sfx/SFX132/01_Clicks_and_Buttons/Slider_Ticks.wav"
+        },
+        {
+          "name": "Soft Button",
+          "url": "/sfx/SFX132/01_Clicks_and_Buttons/Soft_Button.wav"
+        },
+        {
+          "name": "Toggle Switch",
+          "url": "/sfx/SFX132/01_Clicks_and_Buttons/Toggle_Switch.wav"
+        }
+      ]
+    },
+    {
+      "name": "Pops and Bubbles",
+      "goc": "02_Pops_and_Bubbles",
+      "count": 5,
+      "sounds": [
+        {
+          "name": "Box Pop",
+          "url": "/sfx/SFX132/02_Pops_and_Bubbles/Box_Pop.wav"
+        },
+        {
+          "name": "Bubble Reveal",
+          "url": "/sfx/SFX132/02_Pops_and_Bubbles/Bubble_Reveal.wav"
+        },
+        {
+          "name": "Double Bubble",
+          "url": "/sfx/SFX132/02_Pops_and_Bubbles/Double_Bubble.wav"
+        },
+        {
+          "name": "Pointer Bounce",
+          "url": "/sfx/SFX132/02_Pops_and_Bubbles/Pointer_Bounce.wav"
+        },
+        {
+          "name": "Water Drop",
+          "url": "/sfx/SFX132/02_Pops_and_Bubbles/Water_Drop.wav"
+        }
+      ]
+    },
+    {
+      "name": "Notifications and Chimes",
+      "goc": "03_Notifications_and_Chimes",
+      "count": 4,
+      "sounds": [
+        {
+          "name": "Bell Notice",
+          "url": "/sfx/SFX132/03_Notifications_and_Chimes/Bell_Notice.wav"
+        },
+        {
+          "name": "Gentle Reminder",
+          "url": "/sfx/SFX132/03_Notifications_and_Chimes/Gentle_Reminder.wav"
+        },
+        {
+          "name": "Glass Ding",
+          "url": "/sfx/SFX132/03_Notifications_and_Chimes/Glass_Ding.wav"
+        },
+        {
+          "name": "New Message",
+          "url": "/sfx/SFX132/03_Notifications_and_Chimes/New_Message.wav"
+        }
+      ]
+    },
+    {
+      "name": "Success and Rewards",
+      "goc": "04_Success_and_Rewards",
+      "count": 9,
+      "sounds": [
+        {
+          "name": "Access Granted",
+          "url": "/sfx/SFX132/04_Success_and_Rewards/Access_Granted.wav"
+        },
+        {
+          "name": "Badge Shine",
+          "url": "/sfx/SFX132/04_Success_and_Rewards/Badge_Shine.wav"
+        },
+        {
+          "name": "Digital Unlock",
+          "url": "/sfx/SFX132/04_Success_and_Rewards/Digital_Unlock.wav"
+        },
+        {
+          "name": "Double Select",
+          "url": "/sfx/SFX132/04_Success_and_Rewards/Double_Select.wav"
+        },
+        {
+          "name": "Download Done",
+          "url": "/sfx/SFX132/04_Success_and_Rewards/Download_Done.wav"
+        },
+        {
+          "name": "Level Up",
+          "url": "/sfx/SFX132/04_Success_and_Rewards/Level_Up.wav"
+        },
+        {
+          "name": "Reward Bell",
+          "url": "/sfx/SFX132/04_Success_and_Rewards/Reward_Bell.wav"
+        },
+        {
+          "name": "Soft Confirm",
+          "url": "/sfx/SFX132/04_Success_and_Rewards/Soft_Confirm.wav"
+        },
+        {
+          "name": "Success Notes",
+          "url": "/sfx/SFX132/04_Success_and_Rewards/Success_Notes.wav"
+        }
+      ]
+    },
+    {
+      "name": "Alerts and Errors",
+      "goc": "05_Alerts_and_Errors",
+      "count": 4,
+      "sounds": [
+        {
+          "name": "Access Denied",
+          "url": "/sfx/SFX132/05_Alerts_and_Errors/Access_Denied.wav"
+        },
+        {
+          "name": "Soft Warning",
+          "url": "/sfx/SFX132/05_Alerts_and_Errors/Soft_Warning.wav"
+        },
+        {
+          "name": "Urgent Beep",
+          "url": "/sfx/SFX132/05_Alerts_and_Errors/Urgent_Beep.wav"
+        },
+        {
+          "name": "Wrong Password",
+          "url": "/sfx/SFX132/05_Alerts_and_Errors/Wrong_Password.wav"
+        }
+      ]
+    },
+    {
+      "name": "Slides and Swipes",
+      "goc": "06_Slides_and_Swipes",
+      "count": 4,
+      "sounds": [
+        {
+          "name": "Card Slide",
+          "url": "/sfx/SFX132/06_Slides_and_Swipes/Card_Slide.wav"
+        },
+        {
+          "name": "Carousel Step",
+          "url": "/sfx/SFX132/06_Slides_and_Swipes/Carousel_Step.wav"
+        },
+        {
+          "name": "Menu Step",
+          "url": "/sfx/SFX132/06_Slides_and_Swipes/Menu_Step.wav"
+        },
+        {
+          "name": "Underline Swipe",
+          "url": "/sfx/SFX132/06_Slides_and_Swipes/Underline_Swipe.wav"
+        }
+      ]
+    },
+    {
+      "name": "Reveals and Exits",
+      "goc": "07_Reveals_and_Exits",
+      "count": 4,
+      "sounds": [
+        {
+          "name": "Card Open",
+          "url": "/sfx/SFX132/07_Reveals_and_Exits/Card_Open.wav"
+        },
+        {
+          "name": "Logo Reveal",
+          "url": "/sfx/SFX132/07_Reveals_and_Exits/Logo_Reveal.wav"
+        },
+        {
+          "name": "Undo Notes",
+          "url": "/sfx/SFX132/07_Reveals_and_Exits/Undo_Notes.wav"
+        },
+        {
+          "name": "Window Close",
+          "url": "/sfx/SFX132/07_Reveals_and_Exits/Window_Close.wav"
+        }
+      ]
+    },
+    {
+      "name": "Foley and Taps",
+      "goc": "08_Foley_and_Taps",
+      "count": 4,
+      "sounds": [
+        {
+          "name": "Camera Snap",
+          "url": "/sfx/SFX132/08_Foley_and_Taps/Camera_Snap.wav"
+        },
+        {
+          "name": "Door Knock",
+          "url": "/sfx/SFX132/08_Foley_and_Taps/Door_Knock.wav"
+        },
+        {
+          "name": "Page Flip",
+          "url": "/sfx/SFX132/08_Foley_and_Taps/Page_Flip.wav"
+        },
+        {
+          "name": "Wood Tap",
+          "url": "/sfx/SFX132/08_Foley_and_Taps/Wood_Tap.wav"
+        }
+      ]
+    },
+    {
+      "name": "Impacts and Hits",
+      "goc": "09_Impacts_and_Hits",
+      "count": 7,
+      "sounds": [
+        {
+          "name": "Dark Impact",
+          "url": "/sfx/SFX132/09_Impacts_and_Hits/Dark_Impact.wav"
+        },
+        {
+          "name": "Deep Thump",
+          "url": "/sfx/SFX132/09_Impacts_and_Hits/Deep_Thump.wav"
+        },
+        {
+          "name": "Hard Cut",
+          "url": "/sfx/SFX132/09_Impacts_and_Hits/Hard_Cut.wav"
+        },
+        {
+          "name": "Heavy Drop",
+          "url": "/sfx/SFX132/09_Impacts_and_Hits/Heavy_Drop.wav"
+        },
+        {
+          "name": "Low Thud",
+          "url": "/sfx/SFX132/09_Impacts_and_Hits/Low_Thud.wav"
+        },
+        {
+          "name": "Short Hit",
+          "url": "/sfx/SFX132/09_Impacts_and_Hits/Short_Hit.wav"
+        },
+        {
+          "name": "Wood Hammer",
+          "url": "/sfx/SFX132/09_Impacts_and_Hits/Wood_Hammer.wav"
+        }
+      ]
+    },
+    {
+      "name": "Beats and Pulses",
+      "goc": "10_Beats_and_Pulses",
+      "count": 4,
+      "sounds": [
+        {
+          "name": "Double Thump",
+          "url": "/sfx/SFX132/10_Beats_and_Pulses/Double_Thump.wav"
+        },
+        {
+          "name": "Heartbeat",
+          "url": "/sfx/SFX132/10_Beats_and_Pulses/Heartbeat.wav"
+        },
+        {
+          "name": "Iron Pulse",
+          "url": "/sfx/SFX132/10_Beats_and_Pulses/Iron_Pulse.wav"
+        },
+        {
+          "name": "Triple Hit",
+          "url": "/sfx/SFX132/10_Beats_and_Pulses/Triple_Hit.wav"
+        }
+      ]
+    },
+    {
+      "name": "Metal and Bells",
+      "goc": "11_Metal_and_Bells",
+      "count": 5,
+      "sounds": [
+        {
+          "name": "Low Bell",
+          "url": "/sfx/SFX132/11_Metal_and_Bells/Low_Bell.wav"
+        },
+        {
+          "name": "Metal Accent",
+          "url": "/sfx/SFX132/11_Metal_and_Bells/Metal_Accent.wav"
+        },
+        {
+          "name": "Metal Hook",
+          "url": "/sfx/SFX132/11_Metal_and_Bells/Metal_Hook.wav"
+        },
+        {
+          "name": "Metal Ring",
+          "url": "/sfx/SFX132/11_Metal_and_Bells/Metal_Ring.wav"
+        },
+        {
+          "name": "Signal Bell",
+          "url": "/sfx/SFX132/11_Metal_and_Bells/Signal_Bell.wav"
+        }
+      ]
+    },
+    {
+      "name": "Whooshes and Dives",
+      "goc": "12_Whooshes_and_Dives",
+      "count": 4,
+      "sounds": [
+        {
+          "name": "Deep Suction",
+          "url": "/sfx/SFX132/12_Whooshes_and_Dives/Deep_Suction.wav"
+        },
+        {
+          "name": "Energy Dash",
+          "url": "/sfx/SFX132/12_Whooshes_and_Dives/Energy_Dash.wav"
+        },
+        {
+          "name": "Fast Dive",
+          "url": "/sfx/SFX132/12_Whooshes_and_Dives/Fast_Dive.wav"
+        },
+        {
+          "name": "Strong Whoosh",
+          "url": "/sfx/SFX132/12_Whooshes_and_Dives/Strong_Whoosh.wav"
+        }
+      ]
+    },
+    {
+      "name": "Risers and Tension",
+      "goc": "13_Risers_and_Tension",
+      "count": 4,
+      "sounds": [
+        {
+          "name": "Power Swell",
+          "url": "/sfx/SFX132/13_Risers_and_Tension/Power_Swell.wav"
+        },
+        {
+          "name": "Pressure Rise",
+          "url": "/sfx/SFX132/13_Risers_and_Tension/Pressure_Rise.wav"
+        },
+        {
+          "name": "Reverse Bell",
+          "url": "/sfx/SFX132/13_Risers_and_Tension/Reverse_Bell.wav"
+        },
+        {
+          "name": "Tight String",
+          "url": "/sfx/SFX132/13_Risers_and_Tension/Tight_String.wav"
+        }
+      ]
+    },
+    {
+      "name": "Space and Endings",
+      "goc": "14_Space_and_Endings",
+      "count": 4,
+      "sounds": [
+        {
+          "name": "Cave Echo",
+          "url": "/sfx/SFX132/14_Space_and_Endings/Cave_Echo.wav"
+        },
+        {
+          "name": "Dark End",
+          "url": "/sfx/SFX132/14_Space_and_Endings/Dark_End.wav"
+        },
+        {
+          "name": "Fading End",
+          "url": "/sfx/SFX132/14_Space_and_Endings/Fading_End.wav"
+        },
+        {
+          "name": "Wide Opening",
+          "url": "/sfx/SFX132/14_Space_and_Endings/Wide_Opening.wav"
+        }
+      ]
+    },
+    {
+      "name": "Doors and Locks",
+      "goc": "15_Doors_and_Locks",
+      "count": 5,
+      "sounds": [
+        {
+          "name": "Heavy Lock",
+          "url": "/sfx/SFX132/15_Doors_and_Locks/Heavy_Lock.wav"
+        },
+        {
+          "name": "Heavy Open",
+          "url": "/sfx/SFX132/15_Doors_and_Locks/Heavy_Open.wav"
+        },
+        {
+          "name": "Machine Lock",
+          "url": "/sfx/SFX132/15_Doors_and_Locks/Machine_Lock.wav"
+        },
+        {
+          "name": "Steel Door",
+          "url": "/sfx/SFX132/15_Doors_and_Locks/Steel_Door.wav"
+        },
+        {
+          "name": "Vault Close",
+          "url": "/sfx/SFX132/15_Doors_and_Locks/Vault_Close.wav"
+        }
+      ]
+    },
+    {
+      "name": "Machines and Robots",
+      "goc": "16_Machines_and_Robots",
+      "count": 8,
+      "sounds": [
+        {
+          "name": "Engine Slowdown",
+          "url": "/sfx/SFX132/16_Machines_and_Robots/Engine_Slowdown.wav"
+        },
+        {
+          "name": "Engine Start",
+          "url": "/sfx/SFX132/16_Machines_and_Robots/Engine_Start.wav"
+        },
+        {
+          "name": "Heavy Roll",
+          "url": "/sfx/SFX132/16_Machines_and_Robots/Heavy_Roll.wav"
+        },
+        {
+          "name": "Landing",
+          "url": "/sfx/SFX132/16_Machines_and_Robots/Landing.wav"
+        },
+        {
+          "name": "Robot Arm",
+          "url": "/sfx/SFX132/16_Machines_and_Robots/Robot_Arm.wav"
+        },
+        {
+          "name": "Robot Steps",
+          "url": "/sfx/SFX132/16_Machines_and_Robots/Robot_Steps.wav"
+        },
+        {
+          "name": "Servo Start",
+          "url": "/sfx/SFX132/16_Machines_and_Robots/Servo_Start.wav"
+        },
+        {
+          "name": "System Shutdown",
+          "url": "/sfx/SFX132/16_Machines_and_Robots/System_Shutdown.wav"
+        }
+      ]
+    },
+    {
+      "name": "Data and Glitches",
+      "goc": "17_Data_and_Glitches",
+      "count": 5,
+      "sounds": [
+        {
+          "name": "Computer Thinking",
+          "url": "/sfx/SFX132/17_Data_and_Glitches/Computer_Thinking.wav"
+        },
+        {
+          "name": "Data Burst",
+          "url": "/sfx/SFX132/17_Data_and_Glitches/Data_Burst.wav"
+        },
+        {
+          "name": "Data Scan",
+          "url": "/sfx/SFX132/17_Data_and_Glitches/Data_Scan.wav"
+        },
+        {
+          "name": "Data Steps",
+          "url": "/sfx/SFX132/17_Data_and_Glitches/Data_Steps.wav"
+        },
+        {
+          "name": "Frame Tear",
+          "url": "/sfx/SFX132/17_Data_and_Glitches/Frame_Tear.wav"
+        }
+      ]
+    },
+    {
+      "name": "Signals and Scans",
+      "goc": "18_Signals_and_Scans",
+      "count": 5,
+      "sounds": [
+        {
+          "name": "Connect",
+          "url": "/sfx/SFX132/18_Signals_and_Scans/Connect.wav"
+        },
+        {
+          "name": "Disconnect",
+          "url": "/sfx/SFX132/18_Signals_and_Scans/Disconnect.wav"
+        },
+        {
+          "name": "Radar Ping",
+          "url": "/sfx/SFX132/18_Signals_and_Scans/Radar_Ping.wav"
+        },
+        {
+          "name": "Signal Sweep",
+          "url": "/sfx/SFX132/18_Signals_and_Scans/Signal_Sweep.wav"
+        },
+        {
+          "name": "Sonar Ping",
+          "url": "/sfx/SFX132/18_Signals_and_Scans/Sonar_Ping.wav"
+        }
+      ]
+    },
+    {
+      "name": "Lasers and Power",
+      "goc": "19_Lasers_and_Power",
+      "count": 5,
+      "sounds": [
+        {
+          "name": "Power Charge",
+          "url": "/sfx/SFX132/19_Lasers_and_Power/Power_Charge.wav"
+        },
+        {
+          "name": "Power Zap",
+          "url": "/sfx/SFX132/19_Lasers_and_Power/Power_Zap.wav"
+        },
+        {
+          "name": "Reactor Ping",
+          "url": "/sfx/SFX132/19_Lasers_and_Power/Reactor_Ping.wav"
+        },
+        {
+          "name": "Short Laser",
+          "url": "/sfx/SFX132/19_Lasers_and_Power/Short_Laser.wav"
+        },
+        {
+          "name": "Triple Laser",
+          "url": "/sfx/SFX132/19_Lasers_and_Power/Triple_Laser.wav"
+        }
+      ]
+    },
+    {
+      "name": "Portals and Shields",
+      "goc": "20_Portals_and_Shields",
+      "count": 9,
+      "sounds": [
+        {
+          "name": "Dissolve",
+          "url": "/sfx/SFX132/20_Portals_and_Shields/Dissolve.wav"
+        },
+        {
+          "name": "Freeze",
+          "url": "/sfx/SFX132/20_Portals_and_Shields/Freeze.wav"
+        },
+        {
+          "name": "Hologram Fold",
+          "url": "/sfx/SFX132/20_Portals_and_Shields/Hologram_Fold.wav"
+        },
+        {
+          "name": "Portal Close",
+          "url": "/sfx/SFX132/20_Portals_and_Shields/Portal_Close.wav"
+        },
+        {
+          "name": "Portal Open",
+          "url": "/sfx/SFX132/20_Portals_and_Shields/Portal_Open.wav"
+        },
+        {
+          "name": "Shield Off",
+          "url": "/sfx/SFX132/20_Portals_and_Shields/Shield_Off.wav"
+        },
+        {
+          "name": "Shield On",
+          "url": "/sfx/SFX132/20_Portals_and_Shields/Shield_On.wav"
+        },
+        {
+          "name": "Teleport",
+          "url": "/sfx/SFX132/20_Portals_and_Shields/Teleport.wav"
+        },
+        {
+          "name": "Warp Tunnel",
+          "url": "/sfx/SFX132/20_Portals_and_Shields/Warp_Tunnel.wav"
+        }
+      ]
+    },
+    {
+      "name": "Quick Swipes",
+      "goc": "21_Quick_Swipes",
+      "count": 4,
+      "sounds": [
+        {
+          "name": "Double Swish",
+          "url": "/sfx/SFX132/21_Quick_Swipes/Double_Swish.wav"
+        },
+        {
+          "name": "Quick Swipe",
+          "url": "/sfx/SFX132/21_Quick_Swipes/Quick_Swipe.wav"
+        },
+        {
+          "name": "Sharp Swipe",
+          "url": "/sfx/SFX132/21_Quick_Swipes/Sharp_Swipe.wav"
+        },
+        {
+          "name": "Tiny Swish",
+          "url": "/sfx/SFX132/21_Quick_Swipes/Tiny_Swish.wav"
+        }
+      ]
+    },
+    {
+      "name": "Soft Sweeps",
+      "goc": "22_Soft_Sweeps",
+      "count": 4,
+      "sounds": [
+        {
+          "name": "Fabric Swipe",
+          "url": "/sfx/SFX132/22_Soft_Sweeps/Fabric_Swipe.wav"
+        },
+        {
+          "name": "Paper Sweep",
+          "url": "/sfx/SFX132/22_Soft_Sweeps/Paper_Sweep.wav"
+        },
+        {
+          "name": "Smooth Wave",
+          "url": "/sfx/SFX132/22_Soft_Sweeps/Smooth_Wave.wav"
+        },
+        {
+          "name": "Soft Glide",
+          "url": "/sfx/SFX132/22_Soft_Sweeps/Soft_Glide.wav"
+        }
+      ]
+    },
+    {
+      "name": "Deep Whooshes",
+      "goc": "23_Deep_Whooshes",
+      "count": 4,
+      "sounds": [
+        {
+          "name": "Bass Pull",
+          "url": "/sfx/SFX132/23_Deep_Whooshes/Bass_Pull.wav"
+        },
+        {
+          "name": "Deep Roll",
+          "url": "/sfx/SFX132/23_Deep_Whooshes/Deep_Roll.wav"
+        },
+        {
+          "name": "Heavy Sweep",
+          "url": "/sfx/SFX132/23_Deep_Whooshes/Heavy_Sweep.wav"
+        },
+        {
+          "name": "Low Swoop",
+          "url": "/sfx/SFX132/23_Deep_Whooshes/Low_Swoop.wav"
+        }
+      ]
+    },
+    {
+      "name": "Reverse Pulls",
+      "goc": "24_Reverse_Pulls",
+      "count": 4,
+      "sounds": [
+        {
+          "name": "Magnet Pull",
+          "url": "/sfx/SFX132/24_Reverse_Pulls/Magnet_Pull.wav"
+        },
+        {
+          "name": "Reverse Rise",
+          "url": "/sfx/SFX132/24_Reverse_Pulls/Reverse_Rise.wav"
+        },
+        {
+          "name": "Reverse Swish",
+          "url": "/sfx/SFX132/24_Reverse_Pulls/Reverse_Swish.wav"
+        },
+        {
+          "name": "Short Inhale",
+          "url": "/sfx/SFX132/24_Reverse_Pulls/Short_Inhale.wav"
+        }
+      ]
+    },
+    {
+      "name": "Spins",
+      "goc": "25_Spins",
+      "count": 4,
+      "sounds": [
+        {
+          "name": "Circle Swish",
+          "url": "/sfx/SFX132/25_Spins/Circle_Swish.wav"
+        },
+        {
+          "name": "Double Spin",
+          "url": "/sfx/SFX132/25_Spins/Double_Spin.wav"
+        },
+        {
+          "name": "Slow Turn",
+          "url": "/sfx/SFX132/25_Spins/Slow_Turn.wav"
+        },
+        {
+          "name": "Zigzag Swish",
+          "url": "/sfx/SFX132/25_Spins/Zigzag_Swish.wav"
+        }
+      ]
+    },
+    {
+      "name": "Fast Passes",
+      "goc": "26_Fast_Passes",
+      "count": 4,
+      "sounds": [
+        {
+          "name": "Drop Pass",
+          "url": "/sfx/SFX132/26_Fast_Passes/Drop_Pass.wav"
+        },
+        {
+          "name": "Fast Flyby",
+          "url": "/sfx/SFX132/26_Fast_Passes/Fast_Flyby.wav"
+        },
+        {
+          "name": "Jet Pass",
+          "url": "/sfx/SFX132/26_Fast_Passes/Jet_Pass.wav"
+        },
+        {
+          "name": "Wide Pass",
+          "url": "/sfx/SFX132/26_Fast_Passes/Wide_Pass.wav"
+        }
+      ]
+    }
+  ],
+  "available": true
+}

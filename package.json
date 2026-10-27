@@ -1,0 +1,44 @@
+{
+  "name": "map-bds",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Local, agent-driven real estate video pipeline",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "video": "tsx --env-file-if-exists=.env scripts/cli.ts",
+    "auto": "tsx --env-file-if-exists=.env scripts/auto-pipeline.ts",
+    "script:ai": "tsx --env-file-if-exists=.env scripts/ai-script.ts",
+    "amenities": "tsx --env-file-if-exists=.env scripts/amenities.ts",
+    "generate-model": "tsx scripts/generate-sample-model.ts",
+    "demo": "npm run video -- render --input examples/ho-tay.json --draft",
+    "studio": "remotion studio src/index.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "tsx --test tests/*.test.ts",
+    "check": "npm run typecheck && npm test"
+  },
+  "dependencies": {
+    "@react-three/fiber": "9.8.2",
+    "@remotion/bundler": "4.0.536",
+    "@remotion/cli": "4.0.536",
+    "@remotion/fonts": "^4.0.536",
+    "@remotion/renderer": "4.0.536",
+    "@remotion/three": "4.0.536",
+    "osm-pbf-parser-node": "1.1.4",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "remotion": "4.0.536",
+    "three": "0.186.1",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@types/three": "^0.183.0",
+    "tsx": "4.23.15",
+    "typescript": "~5.9.3"
+  }
+}

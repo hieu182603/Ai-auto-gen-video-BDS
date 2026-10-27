@@ -1,0 +1,14 @@
+node_modules/
+out/
+.cache/
+.env
+.env.*
+!.env.example
+public/media/*
+!public/media/.gitkeep
+public/generated/
+*.log
+data/osm/
+.codex/
+.cursor/
+.gemini/

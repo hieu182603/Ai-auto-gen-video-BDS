@@ -1,0 +1,4 @@
+[
+  {"input": "examples/ho-tay.json", "format": "landscape"},
+  {"input": "examples/ho-tay.json", "format": "portrait"}
+]
