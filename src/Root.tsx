@@ -5,6 +5,7 @@ import sample from '../examples/ho-tay.json';
 import {dimensions, propertySchema} from './schema';
 import {PropertyVideo} from './Video';
 import {PropertyPoster} from './Poster';
+import {OVERLAY_PREVIEW_FRAMES, OverlayPreview} from './overlay/OverlayPreview';
 
 const property = propertySchema.parse(sample);
 
@@ -45,5 +46,8 @@ export const Root = () => (
         };
       }}
     />
+
+    {/* Xem thử primitive geo overlay (src/overlay) — không phải video sản phẩm. */}
+    <Composition id="OverlayPreview" component={OverlayPreview} durationInFrames={OVERLAY_PREVIEW_FRAMES} fps={30} width={1080} height={1920} />
   </>
 );
